@@ -9,9 +9,10 @@ import androidx.annotation.Nullable;
 public class BaseDadosSeminariosOpenHelper extends SQLiteOpenHelper {
 
     public static final String NOME_BASE_DADOS = "seminarios.db";
+    public static final int VERSAO_BASE_DADOS = 1;
 
     public BaseDadosSeminariosOpenHelper(@Nullable Context context) {
-        super(context, NOME_BASE_DADOS, null, 1);
+        super(context, NOME_BASE_DADOS, null, VERSAO_BASE_DADOS);
     }
 
     @Override
