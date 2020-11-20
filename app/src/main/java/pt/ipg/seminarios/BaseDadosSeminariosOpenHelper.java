@@ -8,8 +8,10 @@ import androidx.annotation.Nullable;
 
 public class BaseDadosSeminariosOpenHelper extends SQLiteOpenHelper {
 
-    public BaseDadosSeminariosOpenHelper(@Nullable Context context, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, "seminarios.db", factory, version);
+    public static final String NOME_BASE_DADOS = "seminarios.db";
+
+    public BaseDadosSeminariosOpenHelper(@Nullable Context context) {
+        super(context, NOME_BASE_DADOS, null, 1);
     }
 
     @Override
